@@ -8,23 +8,23 @@ The application also includes a periodic cleanup task to keep stored items limit
 
 ## Endpoints
 
-POST /api/auth/signup - User registration
-POST /api/auth/login - User login
-POST /api/auth/refresh_token - Token refresh
-DELETE /api/user/ - Delete current user
+- POST /api/auth/signup - User registration
+- POST /api/auth/login - User login
+- POST /api/auth/refresh_token - Token refresh
+- DELETE /api/user/ - Delete current user
 
-GET /api/topic/ - Get all topics
-POST /api/topic/ - Create topic
-DELETE /api/topic/{topic_name} - Delete topic
+- GET /api/topic/ - Get all topics
+- POST /api/topic/ - Create topic
+- DELETE /api/topic/{topic_name} - Delete topic
 
-GET /api/subscription/ - Get user subscriptions
-POST /api/subscription/ - Create subscription
-DELETE /api/subscription/{topic_name} - Delete subscription
+- GET /api/subscription/ - Get user subscriptions
+- POST /api/subscription/ - Create subscription
+- DELETE /api/subscription/{topic_name} - Delete subscription
 
-GET /api/item/ - Get items
-GET /api/item/subscribed/ - Get items from subscribed topics
+- GET /api/item/ - Get items
+- GET /api/item/subscribed/ - Get items from subscribed topics
 
-POST /api/webhook/{source} - Receive webhook payload for a source
+- POST /api/webhook/{source} - Receive webhook payload for a source
 
 ## Startup with docker-compose:
 ### Environment variables:
