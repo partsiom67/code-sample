@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  subapi:
+    container_name: subapi
+    build:
+      context: ./subapi
+    volumes:
+      - ./subapi:/home/subapi
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    env_file:
+      - ./subapi/.env.local
+
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    restart: always
+    env_file:
+      - ./subapi/.env.local
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo:/data/db
+
+volumes:
+  mongo:
+    name: mongo
+    driver: local
+  subapi:
+    name: subapi
+    driver: local
